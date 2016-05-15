@@ -1,15 +1,27 @@
 #hero {
-    height: 500px;
+    height: auto;
     .container {
         h1 {
-            margin: 8.0rem 0 1.0rem 0;
+            padding: 20px;
             color: @hero-h1;
-            text-shadow: 1px 2px 14px black;
+            background-color: @hero-h1-bg;
+            border-top-left-radius: 2em;
+            border-top-right-radius: 15px;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+            z-index: 1;
+            margin: 2.2em 0 0 0;
+            font-size: 3rem;
         }
         h5 {
             color: @hero-h5;
-            margin: 0 0 8.1rem 0;
-            text-shadow: 1px 2px 14px black;
+            padding: 20px;
+            background-color: @hero-h5-bg;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 2em;
+            margin: 0 0 6.2em 0;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+            z-index: 2;
+            font-size: 1.4rem;
         }
     }
 }
