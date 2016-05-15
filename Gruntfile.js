@@ -33,8 +33,9 @@ module.exports = function (grunt) {
             },
             files: {
                 src: [
-                    'node_modules/materialize-css/bin/materialize.js',
                     'node_modules/jquery/dist/jquery.js',
+                    'node_modules/materialize-css/bin/materialize.js',
+                    'js/materialize_init.js',
                     'js/app.js'
                 ],
                 dest: 'js/compressed.js'
@@ -69,12 +70,6 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            jshint: {
-                files: [
-                    'js/*.js'
-                ].concat(jsFilesToIgnoreNegated),
-                tasks: ['jshint']
-            },
             uglify: {
                 files: [
                     'js/*.js'
@@ -83,7 +78,8 @@ module.exports = function (grunt) {
             },
             less: {
                 files: [
-                    'css/*.less'
+                    'css/*.less',
+                    'css/Partials/*.less'
                 ],
                 tasks: ['less', 'compress']
             }
