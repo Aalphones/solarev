@@ -1,25 +1,52 @@
 footer.page-footer {
-  margin-top: 0;
-  background-color: @nav-bg;
-  p {
-      color: @footer-text;
-  }
-  h5 {
-      color: white;
-  }
-  a {
-      color: @footer-text;
-  }
-  ul {
-      li {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          color: @footer-text;
-          padding: 0 0 4px 0;
-          a {
-              
-          }
-      }
-  }
+    margin-top: 0;
+    background-color: @primary;
+    p {
+        color: @text-light;
+        opacity: 0.8;
+    }
+    h5 {
+        color: white;
+    }
+    a {
+        color: @text-light;
+    }
+    ul {
+        li {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: @text-light;
+            padding: 0 0 4px 0;
+            a {
+
+            }
+        }
+    }
+
+    .footer-copyright {
+        .container {
+            .row {
+                .col {
+                    ul {
+                        line-height: 50px;
+                        padding: 0;
+                        margin: 0;
+                        li {
+                            float: left;
+                            a {
+                                transition: background-color .3s;
+                                padding: 0 15px;
+                                line-height: 50px;
+                                display: inline-block;
+                                &:hover {
+                                    background-color: rgba(0,0,0,0.2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 } 
