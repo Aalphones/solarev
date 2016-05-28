@@ -1,34 +1,46 @@
-var anzahl_bilder;
-var anzahl_container;
-var index = 0;
+var anzahl_bilder = 0;
+var anzahl_container = $('.parallax').length;
 var bildbreite = $(this).width();
 var groesse = "_small";
+var bild;
+var last;
 
-console.log(bildbreite);
 // Zähle die Anzahl der Dateien im Ordner /bg
 // Die Anzahl wird durch 3 geteilt
 // da jeweils 3 Versionen jedes Bildes existieren
-$.get('img/count.php', function (data) {
+var getData = $.get('img/count.php', function (data) {
     anzahl_bilder = data;
 });
 
 // Setze Größe der Bilder fest die geladen werden sollen
-if (bildbreite >= 1200) {
+if (bildbreite > 992) {
     groesse = "_large";
-} else if (bildbreite >= 992) {
+} else if (bildbreite > 600) {
     groesse = "_medium";
 }
 
-// Befülle alle Elemente mit Klassenname .parallax mit den Bildern
-$('.parallax').each(function () {
-    if (index === anzahl_bilder) {
-        index = 1;
-    } else {
-        index++;
-    }
+// Warte bis get Request ein Ergebnis geliefert hat
+$.when(getData).done(function () {
+    // Befülle alle Elemente mit Klassenname .parallax mit den Bildern
+    $('.parallax').each(function (index) {
+        if ((index === anzahl_container - 1) || (index === 0)) {
+            bild = 1;
+        } else {
+            last = bild;
+            // Sicherstellen, dass Bilder nicht zweimal nacheinander auftauchen
+            while (last === bild) {
+                bild = parseInt(Math.random() * (anzahl_bilder - 2) + 2);
+            }
+        }
 
-    $(this).html('<img src="img/bg/' 
-            + index 
-            + groesse 
-            + '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
+        console.log(bild);
+
+        $(this).html('<img src="img/bg/'
+                + bild
+                + groesse
+                + '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
+    });
+    
+    // Parallax Effekt aus Materialize Bibliothek
+    $('.parallax').parallax();
 });
