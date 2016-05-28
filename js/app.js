@@ -23,7 +23,7 @@ if (bildbreite > 992) {
 $.when(getData).done(function () {
     // Befülle alle Elemente mit Klassenname .parallax mit den Bildern
     $('.parallax').each(function (index) {
-        if ((index === anzahl_container - 1) || (index === 0)) {
+        if (index === 0) {
             bild = 1;
         } else {
             last = bild;
