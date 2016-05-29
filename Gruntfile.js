@@ -35,6 +35,7 @@ module.exports = function (grunt) {
                 src: [
                     'node_modules/jquery/dist/jquery.js',
                     'node_modules/materialize-css/bin/materialize.js',
+                    'js/timeline.js',
                     'js/materialize_init.js',
                     'js/app.js'
                 ],
