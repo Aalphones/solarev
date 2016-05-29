@@ -23,14 +23,10 @@ function parallaxEffekt() {
     $.when(getData).done(function () {
         // Befülle alle Elemente mit Klassenname .parallax mit den Bildern
         $('.parallax').each(function (index) {
-            if (index === 0) {
-                bild = 1;
-            } else {
-                last = bild;
-                // Sicherstellen, dass Bilder nicht zweimal nacheinander auftauchen
-                while (last === bild) {
-                    bild = parseInt(Math.random() * (anzahl_bilder - 2) + 2);
-                }
+            last = bild;
+            // Sicherstellen, dass Bilder nicht zweimal nacheinander auftauchen
+            while (last === bild) {
+                bild = parseInt(Math.random() * (anzahl_bilder) + 1);
             }
 
             $(this).html('<img src="img/bg/'
@@ -39,27 +35,32 @@ function parallaxEffekt() {
                     + '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
         });
 
+        // Hero Parallax soll auch Hero als Bild erhalten
+        $('#hero').children('.parallax').html('<img src="img/hero'
+                + groesse
+                + '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
+
         // Parallax Effekt aus Materialize Bibliothek
         $('.parallax').parallax();
     });
 }
 
 function navActivate() {
-    $('.nav-activator').click(function(){
+    $('.nav-activator').click(function () {
         var ulItem = $(this).parent().children('ul');
         var openLikeHell = ulItem.hasClass('active');
-        
+
         // Schließe alle Untermenüs
-        $('.nav-activator').each(function(){
+        $('.nav-activator').each(function () {
             $(this).parent().children('ul').removeClass('active');
         });
-        
+
         // Und öffne dann das ausgewählte Menü sofern es nicht schon offen ist
         if (!openLikeHell) {
             ulItem.addClass('active');
-        } 
+        }
     });
-    
+
 }
 
 parallaxEffekt();
