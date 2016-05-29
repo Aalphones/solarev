@@ -16,3 +16,23 @@ nav {
         }
     }
 }
+
+.side-nav {
+    li {
+        overflow: hidden;
+        ul {
+            display: none;
+            &.active {
+                display: block;
+            }
+            li {
+                line-height: 32px;
+                a {
+                    font-size: 12px;
+                    line-height: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
