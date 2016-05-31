@@ -29,16 +29,16 @@ function parallaxEffekt() {
                 bild = parseInt(Math.random() * (anzahl_bilder) + 1);
             }
 
-            $(this).html('<img src="img/bg/'
-                    + bild
-                    + groesse
-                    + '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
+            $(this).html('<img src="img/bg/' +
+					bild +
+                    groesse +
+                    '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
         });
 
         // Hero Parallax soll auch Hero als Bild erhalten
-        $('#hero').children('.parallax').html('<img src="img/hero'
-                + groesse
-                + '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
+        $('#hero').children('.parallax').html('<img src="img/hero' +
+                groesse +
+                '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
 
         // Parallax Effekt aus Materialize Bibliothek
         $('.parallax').parallax();
