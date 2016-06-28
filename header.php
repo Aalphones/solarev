@@ -16,7 +16,7 @@
                 </a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="/home">Startseite</a></li>
-                    <li><a href="aktuelles.html">Aktuelles</a></li>
+                    <li><a href="/aktuelles">Aktuelles</a></li>
                     <li>
                         <a class="dropdown-button" data-activates="dropdown1">Der Verein<i class="fa fa-caret-down right" aria-hidden="true"></i></a>
                         <ul id="dropdown1" class="dropdown-content">
@@ -57,7 +57,7 @@
                     </h2>
                     </li>
                     <li><a href="/home">Startseite</a></li>
-                    <li><a href="aktuelles.html">Aktuelles</a></li>
+                    <li><a href="/aktuelles">Aktuelles</a></li>
                     <li>
                         <a class="nav-activator">Der Verein<i class="fa fa-caret-down right" aria-hidden="true"></i></a>
                         <ul>

@@ -11,6 +11,8 @@ $router->map('GET','/', 'pages/home.html', 'home');
 $router->map('GET','/home', 'pages/home.html', 'home-home');
 $router->map('GET','/impressum', 'pages/impressum.html', 'impressum');
 $router->map('GET','/kontakt', 'pages/kontakt.html', 'kontakt');
+$router->map('GET','/aktuelles', 'pages/news/index.html', 'news');
+$router->map('GET','/aktuelles/[*:news_id]', 'pages/news/index.html', 'news-detail');
 
 // Header einbinden
 include 'header.php';
