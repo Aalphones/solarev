@@ -20,6 +20,12 @@ nav {
 .side-nav {
     li {
         overflow: hidden;
+        a {
+            i {
+                margin-top: 25px;
+                height: auto;
+            }
+        }
         ul {
             display: none;
             &.active {
@@ -33,6 +39,15 @@ nav {
                     height: 32px;
                 }
             }
+        }
+    }
+    
+    .header {
+        background-color: @primary;
+        h2 {
+            font-size: 1.6em;
+            margin-left: 20px;
+            color: @white;
         }
     }
 }
