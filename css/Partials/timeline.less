@@ -78,7 +78,7 @@ Modules - reusable parts of our design
     height: 40px;
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    background-color: @secondary;
+    background-color: @primary;
     img {
         display: block;
         width: 24px;
@@ -96,7 +96,7 @@ Modules - reusable parts of our design
         position: relative;
         left: 20%;
         top: 20%;
-        color: @text-light;
+        color: @secondary-text;
         &.fa-bolt {
             left: 35%;
         }
@@ -189,21 +189,21 @@ Modules - reusable parts of our design
 .cd-timeline-content {
     position: relative;
     margin-left: 60px;
-    background: @third;
+    background: @primary;
     border-radius: 0.25em;
     padding: 1em;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     h2 {
-        color: @text-primary;
+        color: @primary-text;
         font-size: 20px;
     }
     p {
-        color: @text-dark;
+        color: @primary-text;
         opacity: 0.8;
         font-size: 16px;
     }
     .cd-date {
-        color: @text-dark;
+        color: @primary-text;
         opacity: 0.8;
         float: left;
         padding: .8em 0;
@@ -229,7 +229,7 @@ Modules - reusable parts of our design
     height: 0;
     width: 0;
     border: 7px solid transparent;
-    border-right: 7px solid @third;
+    border-right: 7px solid @primary;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -242,7 +242,7 @@ Modules - reusable parts of our design
         top: 24px;
         left: 100%;
         border-color: transparent;
-        border-left-color: @third;
+        border-left-color: @primary;
     }
     .cd-timeline-content .cd-read-more {
         float: left;
@@ -263,7 +263,7 @@ Modules - reusable parts of our design
         left: auto;
         right: 100%;
         border-color: transparent;
-        border-right-color: @third;
+        border-right-color: @primary;
     }
     .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
         float: right;
