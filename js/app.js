@@ -38,7 +38,7 @@ function parallaxEffekt() {
         // Hero Parallax soll auch Hero als Bild erhalten
         $('#hero').children('.parallax').html('<img src="img/hero' +
                 groesse +
-                '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
+                '.jpg" alt="Sonnenenergie Neckar-Alb e.V.">)');
 
         // Parallax Effekt aus Materialize Bibliothek
         $('.parallax').parallax();

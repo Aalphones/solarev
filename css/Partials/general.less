@@ -2,6 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: @body-bg;
 }
 
 main {
@@ -12,8 +13,6 @@ main {
     h2 {
         padding: 12px;
         color: @icons-text;
-        border-top-left-radius: 1em;
-        border-top-right-radius: 15px;
         z-index: 1;
         margin: 0;
         font-size: 3rem;
@@ -23,8 +22,6 @@ main {
     h5 {
         color: @icons-text;
         padding: 20px;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 2em;
         z-index: 2;
         margin: 0;
         font-size: 1.4rem;
@@ -50,9 +47,9 @@ ul {
 }
 
 a {
-    color: @accent;
+    color: @primary;
     &:hover {
-        color: @primary;
+        color: @light;
     }
 }
 

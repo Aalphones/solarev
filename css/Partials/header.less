@@ -1,29 +1,21 @@
 #hero {
+    position: relative;
     .container {
         h1 {
-            padding: 20px;
-            color: @primary-text;
-            background-color: @primary;
-            border-top-left-radius: 2em;
-            border-top-right-radius: 15px;
-            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-            z-index: 1;
-            margin: 2.2em 0 0 0;
-            font-size: 3rem;
-            letter-spacing: 3px;
-            text-shadow: none;
+            color: @accent;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            margin-top: 50px;
+            margin-bottom: 0;
         }
         h5 {
-            color: @primary-text;
-            padding: 20px;
-            background-color: @light;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 2em;
-            margin: 0 0 6.2em 0;
-            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-            z-index: 2;
-            font-size: 1.4rem;
+            color: @icons-text;
+            position: absolute;
+            bottom: 0;
             text-shadow: none;
+            background: @primary;
+            width: 100%;
+            padding: 50px auto;
+            left: 0;
         }
     }
 }

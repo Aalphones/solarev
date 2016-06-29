@@ -88,6 +88,6 @@ module.exports = function (grunt) {
     });
 
     require('load-grunt-tasks')(grunt);
-    grunt.registerTask('default', ['jshint','uglify', 'less', 'compress']);
+    grunt.registerTask('default', ['uglify', 'less', 'compress']);
 
 };
