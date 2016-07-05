@@ -1,10 +1,51 @@
 .news-card {
-    background-color: @primary;
-    color: @primary-text;
-    .card-action {
-        text-align: right;
-        a {
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    .card-content {
+        height: 280px;
+        overflow: hidden;
+        position: relative;
+        .date {
+            padding: 5px;
+            color: @secondary-text;
+        }
+        .close {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            padding: 20px;
+            display: none;
+            cursor: pointer;
+            &.active {
+                display: block;
+            }
+            i {
+                color: @secondary-text;
+                font-size: 1em;
+            }
+        }
+        h5 {
             color: @primary-text;
         }
+        p {
+            color: @secondary-text;
+        }
+        .secondary {
+            color: @primary;
+            opacity: 0.6;
+            padding-bottom: 10px;
+            display: block;
+        }
+    }
+    &.active {
+        height: auto;
+        cursor: default;
+        .card-content {
+            height: auto;
+        }
+    }
+    &.waves-effect.waves-red .waves-ripple {
+        background-color: @primary;
     }
 }

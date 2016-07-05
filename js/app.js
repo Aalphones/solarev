@@ -30,7 +30,7 @@ function parallaxEffekt() {
             }
 
             $(this).html('<img src="img/bg/' +
-					bild +
+                    bild +
                     groesse +
                     '.jpg" alt="Hintergrundbild für Parallax Effekt">)');
         });
@@ -63,5 +63,27 @@ function navActivate() {
 
 }
 
+function newsActivate() {
+    $('.news-card').click(function () {
+        var newsItem = $(this);
+        if (!(newsItem.hasClass('active'))) {
+            newsItem.addClass('active');
+            newsItem.parent().removeClass('l6');
+            newsItem.removeClass('waves-effect');
+            newsItem.children('.card-content').children('.close').addClass('active');
+        }
+    });
+
+    $('.close').click(function (e) {
+        var newsItem = $(this).parent('.card-content').parent('.news-card');
+        e.stopPropagation();
+        newsItem.removeClass('active');
+        newsItem.parent().addClass('l6');
+        newsItem.addClass('waves-effect');
+        $(this).removeClass('active');
+    });
+}
+
 parallaxEffekt();
 navActivate();
+newsActivate();
