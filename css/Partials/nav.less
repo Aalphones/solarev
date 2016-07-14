@@ -3,7 +3,7 @@ nav {
         display: block;
         li {
             a {
-                &:hover {
+                &:hover, &:focus {
                     color: @icons-text;
                 }
             }
@@ -61,5 +61,31 @@ nav {
     display: none;
     .btn-floating {
         background: @light;
+    }
+}
+
+.nav-card {
+    background-color: @primary;
+    .menu-wrapper {
+        display: table;
+        margin: 0 auto;
+        ul {
+            margin: 0;
+            li {
+                display: inline;
+                a {
+                    display: inline-block;
+                    height: 64px;
+                    line-height: 64px;
+                    padding: 0 15px;
+                    color: @icons-text;
+                    &:hover, &:focus {
+                        background-color: @dark;
+                        color: @icons-text;
+                    }
+
+                }
+            }
+        }
     }
 }

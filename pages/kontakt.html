@@ -27,7 +27,7 @@
                 </div>
             </div>
         </article>
-        <form class="col m12 l6">
+        <form class="col m12 l6" id="contact-form" onsubmit="event.preventDefault(); return sendForm();">
             <div class="row">
                 <div class="input-field col s12 m6">
                     <i class="fa fa-user prefix"></i>
@@ -35,24 +35,25 @@
                     <label for="first_name">Vorname</label>
                 </div>
                 <div class="input-field col s12 m6">
+                    <i class="fa fa-user prefix"></i>
                     <input id="last_name" type="text" class="validate">
                     <label for="last_name">Nachname</label>
                 </div>
                 <div class="input-field col s12 m6">
                     <i class="fa fa-industry prefix"></i>
-                    <input id="firma" type="text" class="validate">
+                    <input id="firma" type="text">
                     <label for="firma">Firma</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 m6">
                     <i class="fa fa-phone prefix"></i>
-                    <input id="phone" type="number" class="validate">
+                    <input id="phone" type="number">
                     <label for="phone">Telefon</label>
                 </div>
                 <div class="input-field col s12 m6">
                     <i class="fa fa-fax prefix"></i>
-                    <input id="fax" type="number" class="validate">
+                    <input id="fax" type="number">
                     <label for="fax">Fax</label>
                 </div>
             </div>
@@ -64,15 +65,15 @@
                 </div>
                 <div class="input-field col s12 m6">
                     <i class="fa fa-home prefix"></i>
-                    <input id="page" type="url" class="validate">
+                    <input id="page" type="url">
                     <label for="page">Homepage</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fa fa-comments prefix"></i>
-                    <textarea id="textarea1" class="materialize-textarea" length="240"></textarea>
-                    <label for="textarea1">Ihr Anliegen</label>
+                    <textarea id="textarea" class="materialize-textarea validate" length="240"></textarea>
+                    <label for="textarea">Ihr Anliegen</label>
                 </div>
             </div>
             <div class="row">

@@ -21,10 +21,10 @@
             <div class="col l3 s12">
                 <h5>Aktuelles</h5>
                 <ul>
-                    <li><a href="">Energiewende - Man muss sie nur wollen</a></li>
-                    <li><a href="">Podiumsdiskussionen zur Landtagswahl 2016 mit namhaften Politikern</a></li>
-                    <li><a href="">Wir feiern: 20 Jahre SonnenEnergie Neckar-Alb e.V.</a></li>
-                    <li><a href="">Arbeitswochenende in Warstein</a></li>
+                    <li><a href="aktuelles#06032016">Energiewende - Man muss sie nur wollen</a></li>
+                    <li><a href="aktuelles#30012016">Podiumsdiskussionen zur Landtagswahl 2016 mit namhaften Politikern</a></li>
+                    <li><a href="aktuelles#29082015">Wir feiern: 20 Jahre SonnenEnergie Neckar-Alb e.V.</a></li>
+                    <li><a href="aktuelles#28082015">Arbeitswochenende in Warstein</a></li>
                 </ul>
             </div>
         </div>

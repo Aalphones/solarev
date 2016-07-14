@@ -1,9 +1,18 @@
 .news-card {
+    &:after {
+        content: "Mehr lesen...";
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        color: @dark;
+    }
     height: 300px;
+    width: 100%;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
     .card-content {
-        height: 280px;
+        height: 260px;
         overflow: hidden;
         position: relative;
         .date {
@@ -17,6 +26,7 @@
             padding: 20px;
             display: none;
             cursor: pointer;
+            color: @dark;
             &.active {
                 display: block;
             }
@@ -41,6 +51,9 @@
     &.active {
         height: auto;
         cursor: default;
+        &:after {
+            content: "";
+        }
         .card-content {
             height: auto;
         }

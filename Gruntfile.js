@@ -37,6 +37,7 @@ module.exports = function (grunt) {
                     'node_modules/materialize-css/bin/materialize.js',
                     'js/timeline.js',
                     'js/materialize_init.js',
+                    'js/contact_form.js',
                     'js/app.js'
                 ],
                 dest: 'js/compressed.js'

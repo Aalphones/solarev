@@ -11,6 +11,7 @@ $router->map('GET','/', 'pages/home.html', 'home');
 $router->map('GET','/home', 'pages/home.html', 'home-home');
 $router->map('GET','/impressum', 'pages/impressum.html', 'impressum');
 $router->map('GET','/kontakt', 'pages/kontakt.html', 'kontakt');
+$router->map('GET','/kontakt/senden', 'mailHandler.php', 'kontakt-kontakt');
 $router->map('GET','/aktuelles', 'pages/aktuelles.html', 'news');
 $router->map('GET','/energieszenario', 'pages/energieszenario.html', 'energieszenario');
 $router->map('GET','/verein', 'pages/verein.html', 'verein');

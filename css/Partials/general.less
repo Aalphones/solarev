@@ -49,7 +49,7 @@ ul {
 
 a {
     color: @primary;
-    &:hover {
+    &:hover, &:focus {
         color: @light;
     }
 }
@@ -93,4 +93,14 @@ p {
 
 .doted-line {
     border-bottom: 1px dashed @light;
+}
+
+.btn {
+    background-color: @primary;
+    &:hover, &:focus {
+        background-color: @light;
+    }
+    &:active {
+        background-color: @dark;
+    }
 }
